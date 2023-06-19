@@ -12,6 +12,47 @@
     --dark: hsl(240, 100%, 5%);
 
 }
+.nav1{
+    position: absolute;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--Orange);
+    overflow: hidden;
+    transition: .4s ease;
+}
+.nav1 div{
+    margin: 20px;
+    width: 13%;
+}
+
+.open{
+    width: 50%;
+    transform: translateX(15%);
+}
+.close{
+    width: 0%;
+    transform: translateX(-15%);
+
+}
+.nav1 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0px;
+}
+.nav1 li{
+    list-style: none;
+    color: white;
+    font-size: 20px;
+    transition: .4s ease;
+}
+.nav1 li:hover{
+    color: var(--dark);
+
+}
 .flex-row{
     display: flex;
     flex-direction: row;
@@ -22,7 +63,7 @@ main{
     margin-block: 90px 65px;
   
 }
-ul{
+nav ul{
     list-style: none;
     display: flex;
     gap: 55px;
@@ -30,7 +71,7 @@ ul{
     font-size: 19px;
     cursor: pointer;
 }
-li{
+nav li{
     transition: .4s ease;
 
 }
@@ -138,4 +179,47 @@ button:hover{
 .row p{
     color:var(--Dark-grayish-blue) ;
 
+}
+
+@media screen and (max-width:1029px) {
+    main{
+        margin-inline: 30px;
+        margin-block: 20px 65px;
+    }
+    nav ul{
+        display: none;
+    }
+    nav .pp{
+        display: block;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .extend{
+        flex-direction: column;
+        margin-bottom: 30px;
+
+    }
+    .barner img{
+        width: 100%;
+    }
+    .bloc2{
+        flex-direction: column;
+  
+    }
+    nav{
+        margin-inline: 30px;
+        margin-block: 20px 65px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .paragraphe p{
+        margin-left: 0px;
+        font-size: 17px;
+    
+    }
+    button{
+        margin-left: 0px;
+
+    }
 }
